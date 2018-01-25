@@ -1,0 +1,343 @@
+<!doctype html>
+<html class="no-js">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>伴你时刻</title>
+
+		<!-- Set render engine for 360 browser -->
+		<meta name="renderer" content="webkit">
+
+		<!-- No Baidu Siteapp-->
+		<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+		<link rel="icon" type="image/png" href="assets/i/favicon.png">
+
+		<!-- Add to homescreen for Chrome on Android -->
+		<meta name="mobile-web-app-capable" content="yes">
+		<link rel="icon" sizes="192x192" href="assets/i/app-icon72x72@2x.png">
+
+		<!-- Add to homescreen for Safari on iOS -->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="apple-mobile-web-app-title" content="Amaze UI" />
+		<link rel="apple-touch-icon-precomposed" href="assets/i/app-icon72x72@2x.png">
+
+		<!-- Tile icon for Win8 (144x144 + tile color) -->
+		<meta name="msapplication-TileImage" content="assets/i/app-icon72x72@2x.png">
+		<meta name="msapplication-TileColor" content="#0e90d2">
+
+		<link rel="stylesheet" href="static/AmazeUI-2.7.2/assets/css/amazeui.min.css">
+		<link rel="stylesheet" type="text/css" href="css/animate.css"/>
+		<link rel="stylesheet" type="text/css" href="css/app.css"/>
+        <style type="text/css">
+        	.header{
+        		position: relative;
+        		width: 100%;
+        		height: 120px;
+        		overflow: hidden;
+        	}
+        	.header .am-slider .am-slides img{
+        		height: 120px;
+        	}
+        	.content{
+        		position: absolute;
+        		width: 100%;
+        		top: 120px;
+        		bottom: 137.38px;
+        	}
+        	.am-g{ 
+        		position: relative;
+        		width: 100%;
+        		height: 100%;
+        	}
+        	.am-g-left,.am-g-right{
+        		position: relative;
+        		height: 100%;
+        	}
+        	.am-g-title{
+        		position: relative;
+        		height: 40px;
+        		line-height: 40px;
+        	}
+        	.am-g-content{
+        		position: absolute;
+        		top: 40px;
+        		bottom: 0px;
+        		overflow: auto;
+        	}
+        	.am-g-left-title{
+        		color: red;
+        		font-weight: bold;
+        		font-size: 14px;
+        		margin-bottom:0px;
+        	}
+        	.am-g-left-content li{
+        		margin: 10px 0px;
+        		padding: 0px 5px;
+        	}
+        	.am-g-left-content li img{
+        		width: 100%;
+        		height: auto;
+        	}
+        	
+        	.am-g-right-content li{
+        		float: left;
+        		width: 50%;
+        		padding: 10px;
+
+        	}
+        	.am-g-right-content li img{
+        		width: 100%;
+        		height: auto;
+        		border-radius:100% ;
+        	}
+        	.am-g-right-content li span{
+        		display: block;
+        		width: 100%;
+        		height: 30px;
+        		line-height: 30px;
+        		color: red;
+        		font-weight: bold;
+        		text-align: center;
+        		font-size: 15px;
+        	}
+        	.footer{
+        		position: absolute;
+        		border: 0px;
+        		bottom: 0px;
+        		width: 100%;
+        		height: auto;
+        		background: rgba(0,0,0,0);
+        	}
+        	.shoppingCart{
+        		position: relative;
+        		width: 100%;
+        		height: auto;
+        		background: #ffffff;
+        	}
+        	.shoppingCart .shoppingCart-title {
+        		height: 35px;
+        		line-height: 40px;
+        		text-indent: 20px;
+        		background-color: red;
+        		color: #ffffff;
+        	}
+        	.shoppingCart .shoppingCart-box p.noIndent{
+        		width: 100%;
+        		margin: 15px 0px;
+        		text-align: center;
+        	}
+        	.shoppingCart-box .clickDZ{
+        		background-color: #ffffff;
+        		border: 1px solid #333333;
+        		margin-right: 10px;
+        		color: #333333;
+        	}
+        	.shoppingCart .shoppingCart-oprate{
+        		width: 100%;
+        		text-align: center;
+        		padding: 10px 10px;
+        	}
+        	.shoppingCart .shoppingCart-oprate .cancelOrder{
+        		float: left;
+        		border-radius:10px ;
+        	}
+        	.shoppingCart .shoppingCart-oprate .finalizeOrder{
+        		float: right;
+        		border-radius:10px ;
+        	}
+        	.shoppingCart .shoppingCart-oprate .cancelOrder i,.shoppingCart .shoppingCart-oprate .finalizeOrder i{
+        		margin-right: 10px;
+        	}
+        	
+        	.menuBox{
+        		position: relative;
+        		width: 100%;
+        		height: auto;
+        		background-color: #ffffff;
+        		border-top:1px solid #33333;
+        	}
+        	.menuTitle{
+        		width: 100%;
+        		height: auto;
+        		padding: 10px 20px;
+        		line-height: 35px;
+        		font-weight: 900;
+        	}
+        	.menuTitle .cancelMenu{
+        		float: right;
+        		border-radius:5px;
+        	}
+        	.menuCon li{
+        		float: left;
+        		padding: 10px;
+        	}
+        	.menuCon li img{
+        		width: 100px;
+        		height: auto;
+        		border-radius:100% ;
+        	}
+        	.menuCon li span{
+        		display: block;
+        		width: 100%;
+        		height: 30px;
+        		line-height: 30px;
+        		color: red;
+        		font-weight: bold;
+        		text-align: center;
+        		font-size: 15px;
+        	}
+        	.menuBox .menuCon:after{
+        		content: "";
+                display: block;
+                clear: both;
+                height: 0px;
+                visibility: hidden;
+        	}
+        </style>
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="header">
+				<div class="am-slider am-slider-default" data-am-flexslider id="demo-slider-0">
+					<ul class="am-slides">
+						<li><img src="http://s.amazeui.org/media/i/demos/bing-1.jpg" /></li>
+						<li><img src="http://s.amazeui.org/media/i/demos/bing-2.jpg" /></li>
+					</ul>
+				</div>
+			</div>
+			<div class="content am-box">
+				<div class="am-g">
+					<div class="am-u-sm-4 am-g-left">
+						<h4 class="am-g-title am-g-left-title">顿顿时刻</h4>
+						<ul class="am-g-content am-g-left-content foodTitle">
+							<li><img src="static/AmazeUI-2.7.2/assets/i/app-icon72x72@2x.png" /></li>
+							<li><img src="static/AmazeUI-2.7.2/assets/i/app-icon72x72@2x.png" /></li>
+							<li><img src="static/AmazeUI-2.7.2/assets/i/app-icon72x72@2x.png" /></li>
+							<li><img src="static/AmazeUI-2.7.2/assets/i/app-icon72x72@2x.png" /></li>
+							<li><img src="static/AmazeUI-2.7.2/assets/i/app-icon72x72@2x.png" /></li>
+						</ul>
+					</div>
+					<div class="am-u-sm-8 am-g-right">
+                        <div class="am-g-title am-g-right-title">
+                        	<span>食聊刻（100+）</span>
+                        	<span>商家电话</span>
+                        </div>
+                    	<ul class="am-g-content am-g-right-content foodCon animated">
+							<li><img src="static/AmazeUI-2.7.2/assets/i/app-icon72x72@2x.png" /><span>顿顿小盘鸡</span></li>
+							<li><img src="static/AmazeUI-2.7.2/assets/i/app-icon72x72@2x.png" /><span>顿顿小盘鸡</span></li>
+							<li><img src="static/AmazeUI-2.7.2/assets/i/app-icon72x72@2x.png" /><span>顿顿小盘鸡</span></li>
+							<li><img src="static/AmazeUI-2.7.2/assets/i/app-icon72x72@2x.png" /><span>顿顿小盘鸡</span></li>
+							<li><img src="static/AmazeUI-2.7.2/assets/i/app-icon72x72@2x.png" /><span>顿顿小盘鸡</span></li>
+							<li><img src="static/AmazeUI-2.7.2/assets/i/app-icon72x72@2x.png" /><span>顿顿小盘鸡</span></li>
+							<li><img src="static/AmazeUI-2.7.2/assets/i/app-icon72x72@2x.png" /><span>顿顿小盘鸡</span></li>
+							<li><img src="static/AmazeUI-2.7.2/assets/i/app-icon72x72@2x.png" /><span>顿顿小盘鸡</span></li>
+							<li><img src="static/AmazeUI-2.7.2/assets/i/app-icon72x72@2x.png" /><span>顿顿小盘鸡</span></li>
+							<li><img src="static/AmazeUI-2.7.2/assets/i/app-icon72x72@2x.png" /><span>顿顿小盘鸡</span></li>
+							<li><img src="static/AmazeUI-2.7.2/assets/i/app-icon72x72@2x.png" /><span>顿顿小盘鸡</span></li>
+							<li><img src="static/AmazeUI-2.7.2/assets/i/app-icon72x72@2x.png" /><span>顿顿小盘鸡</span></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="footer">
+				<div class="menuBox animated" style="display: none;">
+					<div class="menuTitle">
+						<span>请选择食物</span>
+	                	<a class="am-btn am-btn-warning am-btn-xs cancelMenu" href="javascript:void(0)">取消</a>
+	                </div>
+	            	<ul class="menuCon">
+						<li><img src="static/AmazeUI-2.7.2/assets/i/app-icon72x72@2x.png" /><span>顿顿小盘鸡</span></li>
+						<li><img src="static/AmazeUI-2.7.2/assets/i/app-icon72x72@2x.png" /><span>顿顿小盘鸡</span></li>
+						<div style="clear: both;"></div>
+					</ul>
+				</div>
+				<div class="shoppingCart">
+					<div class="shoppingCart-title">
+						<h4>我的订单-外卖</h4>
+						<span></span>
+					</div>
+					<div class="shoppingCart-box">
+						<p class="noIndent">我的订单是空的</p>
+						
+					</div>
+					<div class="shoppingCart-oprate">
+						<a class="am-btn am-btn-warning  am-btn-xs  cancelOrder" href="#">
+						    <i class="am-icon-shopping-cart"></i>取消订单
+						</a>
+						<a class="am-btn am-btn-warning am-btn-xs  finalizeOrder" href="#">
+						    <i class="am-icon-shopping-cart"></i>完成订单
+						</a>
+						<div style="clear: both;"></div>
+					</div>
+				</div>
+			</div>
+			
+			
+		</div>
+		<!--在这里编写你的代码-->
+
+		<!--[if (gte IE 9)|!(IE)]><!-->
+		<script src="js/jquery-2.1.1.min.js"></script>
+		<!--<![endif]-->
+		<!--[if lte IE 8 ]>
+		<script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
+		<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+		<script src="assets/js/amazeui.ie8polyfill.min.js"></script>
+		<![endif]-->
+		<script src="static/AmazeUI-2.7.2/assets/js/amazeui.min.js"></script>
+		<script>
+			$(function() {
+				var $slider = $('#demo-slider-0');
+				var counter = 0;
+				var getSlide = function() {
+					counter++;
+					return '<li><img src="http://s.amazeui.org/media/i/demos/bing-' +
+						(Math.floor(Math.random() * 4) + 1) + '.jpg" />' +
+						'<div class="am-slider-desc">动态插入的 slide ' + counter + '</div></li>';
+				};
+				$(".foodTitle li").click(function(){
+					$(".foodCon").removeClass("fadeIn").addClass("fadeIn");
+				})
+				//加载初始动画
+				$(".foodCon").addClass("fadeIn");
+
+				$(".foodCon").on("click","li",function(){
+					$(".menuBox").removeClass("bounceOutDown").show().addClass("bounceInUp");
+				})
+				$(".cancelMenu").click(function(){
+					$(".menuBox").removeClass("bounceInUp").addClass("bounceOutDown");
+					setTimeout(function(){
+						$(".menuBox").hide();
+					},1000)
+				})
+				$(".menuBox .menuCon").on("click","li",function(){
+					$(".menuBox").removeClass("bounceInUp").addClass("bounceOutDown");
+					setTimeout(function(){
+						$(".menuBox").hide();
+					},1000)
+					$(".noIndent").hide();
+					//加入购物车
+					var divH = '<div class="scGood">'
+							 +     '<a class="am-btn am-btn-warning am-btn-xs clickDZ" href="javascript:void(0)">点击定制</a>'
+							 +     '1*顿顿小柔，第二个半价  2.5元'
+						     + '</div>'
+				    $(".shoppingCart-box").append(divH);
+				    //获取购物车高度
+				    var shoppingCartHeight = $(".shoppingCart").height();
+				    $(".content").css("bottom",shoppingCartHeight+"px");
+				})
+				
+
+			});
+
+		</script>
+	</body>
+
+</html>
